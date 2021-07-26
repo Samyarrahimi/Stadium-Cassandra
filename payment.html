@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+</head>
+<body>
+
+<br>
+<h1>do you want to buy a class {{selected_class}} ticket?</h1>
+<form action="/indexprg" method="post">
+    <input type="hidden" name="selected_class" value="{{selected_class}}">
+    <button>No, take me back to Home page</button>
+</form>
+<br>
+<form action="/paymentdone" method="post">
+    <input type="hidden" name="selected_class" value="{{selected_class}}">
+    <button>Pay!</button>
+</form>
+
+
+<script>
+
+
+    function redirectPost(name, value) {
+        var form = document.createElement('form');
+        document.body.appendChild(form);
+        form.method = 'post';
+        form.action = "http://localhost:5000/indexprg";
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+        form.submit();
+    }
+
+    window.setTimeout(function () {
+           redirectPost("selected_class", "{{selected_class}}")
+      }
+     , 10000);
+
+    // window.setTimeout(function () {
+    //    window.location.href = "http://localhost:5000/";
+    //}, 10000);
+</script>
+
+</body>
+</html>

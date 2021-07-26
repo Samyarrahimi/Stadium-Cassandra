@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game ticket sale page</title>
+</head>
+<body>
+<br>
+<h1>20000 tickets in total</h1>
+<br>
+<h1>5000 tickets for each class</h1>
+<br>
+
+<h3>Class A remaining tickets : {{A_rem}}</h3>
+<form action="/paymentprg" method="post">
+    <input type="hidden" name="selected_class" value="A">
+    <input type="text" placeholder="Enter your username" name="username" required="required">
+    <button>Buy</button>
+</form>
+
+<br>
+
+<h3>Class B remaining tickets : {{B_rem}}</h3>
+<form action="/paymentprg" method="post">
+    <input type="hidden" name="selected_class" value="B">
+    <input type="text" placeholder="Enter your username" name="username" required="required">
+    <button>Buy</button>
+</form>
+
+<br>
+
+<h3>Class C remaining tickets : {{C_rem}}</h3>
+<form action="/paymentprg" method="post">
+    <input type="hidden" name="selected_class" value="C">
+    <input type="text" placeholder="Enter your username" name="username" required="required">
+    <button>Buy</button>
+</form>
+
+<br>
+
+<h3>Class D remaining tickets : {{D_rem}}</h3>
+<form action="/paymentprg" method="post">
+    <input type="hidden" name="selected_class" value="D">
+    <input type="text" placeholder="Enter your username" name="username" required="required">
+    <button>Buy</button>
+</form>
+
+</body>
+</html>
